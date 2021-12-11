@@ -1,0 +1,86 @@
+body{ padding: 4rem; }
+
+.button, button, input[type='button'], input[type='reset'], input[type='submit'] {
+    background-color: red;
+    border: 0.1rem solid red;
+}
+
+#section-courses-list{
+    display: none;
+    opacity: 0;
+
+    transition: all 500ms;
+}
+
+#section-courses-list.open{
+    display: block;
+}
+
+#section-courses-list.open.show{
+    opacity: 1;
+}
+
+p{
+    margin: 0;
+}
+
+body{
+    --item-width: 100%;
+    --container-display: block;
+}
+
+@media screen and (min-width:500px) {
+    body{
+        --item-width: calc( 50% - 1rem );
+        --container-display: flex;
+    }
+}
+
+
+@media screen and (min-width:600px) {
+    body{
+        --item-width: calc( 33.333% - 1rem )
+    }
+}
+
+@media screen and (min-width:800px) {
+    body{
+        --item-width: calc( 25% - 1rem )
+    }
+}
+
+@media screen and (min-width:1000px) {
+    body{
+        --item-width: calc( 20% - 1rem )
+    }
+}
+
+header p:first-of-type, 
+main p:first-of-type{
+    font-weight: 900;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+p:last-of-type{
+    margin-bottom: 1rem;
+}
+
+button{
+    margin-top: 0rem;
+}
+
+ul{
+    display: var(--container-display);
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+li{
+    width: var(--item-width);
+    border: 0.1rem dotted grey;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
